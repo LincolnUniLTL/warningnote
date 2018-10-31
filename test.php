@@ -138,8 +138,8 @@ echo "<h3>Does it display in the right place?</h3>\n";
 			<li class='check'>If any warning note is current, it will display in a yellow bar below as it would beneath the Primo search bar.
 				<ul>
 				<li class='check'>Any manual note will take priority.</li>
-				<li class='check'>If <? echo $manual_note; ?> is empty, an automated note will appear if either Alma and/or Primo have a status of "<? echo $readable_status['PERF']; ?>", "<? echo $readable_status['ERROR']; ?>", or "<? echo $readable_status['MAINT']; ?>".</li>
-				<li class='check'>If both Alma and Primo have a status of "<? echo $readable_status['OK']; ?>" or "<? echo $readable_status['SERVICE']; ?>", no message (or yellow bar) will appear.</li></ul>
+				<li class='check'>If <?php echo $manual_note; ?> is empty, an automated note will appear if either Alma and/or Primo have a status of "<?php echo $readable_status['PERF']; ?>", "<?php echo $readable_status['ERROR']; ?>", or "<?php echo $readable_status['MAINT']; ?>".</li>
+				<li class='check'>If both Alma and Primo have a status of "<?php echo $readable_status['OK']; ?>" or "<?php echo $readable_status['SERVICE']; ?>", no message (or yellow bar) will appear.</li></ul>
 			</li>
 			</ul>
 		</prm-search-bar>

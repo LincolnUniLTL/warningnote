@@ -4,7 +4,7 @@
 	$warning = fread($handle, filesize($manual_note));
 	fclose($handle);
 ?>
-theAlert = "<? echo $warning; ?>";
+theAlert = "<?php echo $warning; ?>";
 
 function warningNote(warningText) {
 	var warningPlace = document.getElementsByTagName("prm-search-bar")[0];
@@ -15,14 +15,14 @@ function warningNote(warningText) {
 	warningPlace.parentNode.insertBefore(warningNote,warningPlace.nextSibling);
 }
 
-status_A = '<? echo $status_A; ?>';
-note_A = '<? echo $note_A; ?>';
-status_P = '<? echo $status_P; ?>';
-note_P = '<? echo $note_P; ?>';
+status_A = '<?php echo $status_A; ?>';
+note_A = '<?php echo $note_A; ?>';
+status_P = '<?php echo $status_P; ?>';
+note_P = '<?php echo $note_P; ?>';
 
 if (theAlert == "") {
 	if (status_A == "PERF" || status_A == "ERROR" || status_A == "MAINT") {
-		theAlert = theAlert + 'Automated note: <strong>' + '<? echo $readable_status[$status_A]; ?>' + '</strong>';
+		theAlert = theAlert + 'Automated note: <strong>' + '<?php echo $readable_status[$status_A]; ?>' + '</strong>';
 		if (status_A == "MAINT") {
 			theAlert = theAlert + ' in progress';
 		} else {
@@ -36,7 +36,7 @@ if (theAlert == "") {
 		}
 	}
 	if (status_P == "PERF" || status_P == "ERROR" || status_P == "MAINT") {
-		theAlert = theAlert + 'Automated note: <strong>' + '<? echo $readable_status[$status_P]; ?>' + '</strong>';
+		theAlert = theAlert + 'Automated note: <strong>' + '<?php echo $readable_status[$status_P]; ?>' + '</strong>';
 		if (status_P == "MAINT") {
 			theAlert = theAlert + ' in progress';
 		} else {
@@ -50,7 +50,7 @@ if (theAlert == "") {
 		}
 	}
 	if (theAlert != "") {
-		theAlert = theAlert + '.<br/>' + "<? echo $auto_apology; ?>";
+		theAlert = theAlert + '.<br/>' + "<?php echo $auto_apology; ?>";
 	}
 }
 
