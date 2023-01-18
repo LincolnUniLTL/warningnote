@@ -5,6 +5,7 @@ When we migrated to Alma/Primo, our senior management challenged us on how we wo
 
 More recently we've updated the code to use the new status API, and to migrate it to Primo NUI. A manual option remains available for advertising other outages (eg a recent issue with a large database vendor), and notes can be displayed on other webpages.
 
+**NOTE:** We haven't used this for a few years, and particularly haven't tested it above PHP 5.6, or with Primo VE - it is highly likely to break in these environments.
 
 To install
 ----------
